@@ -15,7 +15,7 @@ Laith Samamah, Manar Olimat, Jafar Thawahrah, Emad Hashash, Dua'a Nawwas
 
 <h4> Wireframe and Mockup </h4>
 
-[Uploading TaskOrganizer Wireframe & Mockup.pdf…]()
+[TaskOrganizer Wireframe & Mockup.pdf](https://github.com/JafarThwahrah/Task-Organizer/files/9438339/TaskOrganizer.Wireframe.Mockup.pdf)
 
 
 [Live URL](https://task-organizer-group-2.github.io/Task-organizer/)
