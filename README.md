@@ -15,11 +15,11 @@ Laith Samamah, Manar Olimat, Jafar Thawahrah, Emad Hashash, Dua'a Nawwas
 
 <h4> Wireframe and Mockup </h4>
 
-<h4> [Live URL] (https://task-organizer-group-2.github.io/Task-organizer/) </h4>
+<h4> [Live URL]:(https://task-organizer-group-2.github.io/Task-organizer/) </h4>
 
-<h4> [Organisation Link] (https://github.com/Task-organizer-group-2/Task-organizer#task-organizer) </h4>
+<h4> [Organisation Link]:(https://github.com/Task-organizer-group-2/Task-organizer#task-organizer) </h4>
 
-<h4> [Trello group link] (https://trello.com/b/S7YLUtou/task-management-project)</h4>
+<h4> [Trello group link]:(https://trello.com/b/S7YLUtou/task-management-project)</h4>
 
 
 
