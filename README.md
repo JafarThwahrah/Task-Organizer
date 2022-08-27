@@ -1,7 +1,7 @@
 # Task-Organizer
 
 
-# h5 Description
+<h4> Description </h4>
 
 This Task Management project is a part of Orange Coding Academy, in which we built a website where you can register/ sign in and have a dashboard where you can add your tasks, sort, check and delete them.
 
