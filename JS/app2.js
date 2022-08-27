@@ -130,7 +130,7 @@ function addCard(task) {
     <div class="box ${colorClass(task.priority)}" >
     <a href="" class="delete-btn" style="color: black" 
     >
-    <img src="../images/trash-outline.svg" id= "${task.id}" name="id">
+    <img src="./images/trash-outline.svg" id= "${task.id}" name="id">
      </a>
     <h2>${task.title}</h2>
     <p>${task.description}</p>
