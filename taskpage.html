@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tasks</title>
+
+		<!-- ===== Boxicons CSS ===== -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- ===== font-awesome ===== -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+			integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./CSS/style2.css" />
+	</head>
+	<body>
+		<!-- emad - start -->
+		<header style="margin-bottom: 50px">
+			<nav>
+				<div class="nav-bar">
+					<span class="logo1 navLogo"
+						><a href="#"><img src="./images/EEE.png" width="150px" /></a
+					></span>
+
+					<div class="darkLight-searchBox">
+						<div class="dark-light">
+							<i class="bx bx-sun sun"></i>
+							<i class="bx bx-moon moon"></i>
+						</div>
+					</div>
+					<i class="bx bx-menu sidebarOpen"></i>
+					<div class="menu">
+						<div class="logo-toggle">
+							<span class="logo"
+								><a href="#"><img src="./images/EEE.png" width="150px" /></a
+							></span>
+							<i class="bx bx-x siderbarClose"></i>
+						</div>
+						<ul class="nav-links">
+							<li class="btn2" id="navName">Hello, "name"</li>
+							<li class="logout" id="logout-btn"><a href="#">Logout</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- emad - end -->
+
+		<main id="main-task">
+			<!-- laith - start - form -->
+			<h3>Create Tasks</h3>
+
+			<div id="formDiv" class="container">
+				<br />
+
+				<!-- <div id="label" >Create new task</div> -->
+				<form action="" id="newTaskForm" class="container">
+					<div class="row">
+						<div class="col-6">
+							<label for="Title" class="form-label">Task title</label>
+							<input
+								type="text"
+								class="form-control"
+								id="Title"
+								name="Title"
+								placeholder="Write a title for your task"
+								required
+							/>
+						</div>
+						<div class="col-6">
+							<label for="Description" class="form-label"
+								>Task description</label
+							>
+							<input
+								type="text"
+								class="form-control"
+								id="Description"
+								name="Description"
+								placeholder="Enter a descriptionc(optional)"
+							/>
+						</div>
+					</div>
+					<br />
+					<div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="radio"
+								name="Radio"
+								value="Critical"
+								id="Radio1"
+								required
+							/>
+							<label class="form-check-label red" for="Radio1">Critical</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="radio"
+								name="Radio"
+								value="Normal"
+								id="Radio2"
+								required
+							/>
+							<label class="form-check-label orange" for="Radio2">Normal</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="radio"
+								name="Radio"
+								value="Low priority"
+								id="Radio3"
+							/>
+							<label class="form-check-label blue" for="Radio3"
+								>Low priority</label
+							>
+						</div>
+					</div>
+					<br />
+					<button type="submit" class="btn btn-primary">Save</button>
+				</form>
+				<br />
+			</div>
+
+			<!-- laith - end - form -->
+
+			<!-- jafar - start - dropdowns -->
+
+			<!-- second filter srart here dropdowns -->
+
+			<h3>Your Tasks</h3>
+			<div class="container mt-5 mb-4 px-5" id="filterDiv">
+				<div>
+					<select
+						class="form-select dropdown ms-3"
+						id="StatusID"
+						aria-label="Default select example"
+						onChange="getStatus(this);"
+					>
+						<option value="1">completed</option>
+						<option value="2">incomplete</option>
+						<option
+							class="dropdown-header"
+							value="Filter by Status..."
+							disabled
+							selected
+						>
+							Filter by Status...
+						</option>
+					</select>
+
+					<select
+						class="form-select dropdown"
+						id="PriorityID"
+						aria-label="Default select example"
+						onChange="getPriority(this);"
+					>
+						<option value="1">Critical</option>
+						<option value="2">Normal</option>
+						<option value="3">Low priority</option>
+						<option
+							class="dropdown-header"
+							value="Filter by Priority..."
+							disabled
+							selected
+						>
+							Filter by Priority...
+						</option>
+					</select>
+					<span
+						><button class="showAll" onclick="ShowAllCards();">
+							show all
+						</button></span
+					>
+				</div>
+			</div>
+
+			<!-- duaa - start - saved task -->
+			<section id="cards-container">
+				<div class="container p-5" id="cards">
+					<div class="row g-4" id="card-row"></div>
+				</div>
+				<div class="container">
+					<button id="delete-all" class="fill">Delete all</button>
+					<button id="delete-all-com" class="fill">Delete completed</button>
+				</div>
+			</section>
+			<!-- duaa - end - saved task -->
+		</main>
+
+		<footer>
+			<!-- emad - start -->
+			<div class="textleft">
+				<h3>Taskat, get the work done!</h3>
+				<br />
+				Our team: <br />
+				Laith Samamah, Manar Olimat, Jafar Thawahrah,<br />
+				Emad Hashash, Dua'a Nawwas
+			</div>
+			<div class="logoright">
+				<span class="logo2 navLogo"
+					><a href="#"><img src="./images/EEE.png" width="150px" /></a
+				></span>
+				<p class="footer-bottom">©Copyright 2022</p>
+			</div>
+			<!-- emad - end -->
+		</footer>
+
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+			crossorigin="anonymous"
+		></script>
+		<script src="./JS/app2.js"></script>
+	</body>
+</html>
