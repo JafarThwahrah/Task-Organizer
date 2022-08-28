@@ -281,8 +281,6 @@ body.dark footer {
 }
 
 /* hero animation End here /
-
-
 / Jafar End */
 /* hero Section End here*/
 
@@ -350,7 +348,7 @@ hr {
 	visibility: hidden;
 	opacity: 0;
 	transition: 0.5s;
-	z-index: 1000f;
+	z-index: 1000;
 }
 .registerContainer#popup.active {
 	visibility: visible;
