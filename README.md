@@ -1,10 +1,12 @@
-# Task-Organizer
+### Description
 
+Taskat is a Task Management website project to organize daily tasks.
 
-<h4> Description </h4>
+Features:
 
-This Task Management project is a part of Orange Coding Academy, in which we built a website where you can register/ sign in and have a dashboard where you can add your tasks, sort, check and delete them.
-
+- Registeration and sign in.
+- A dashboard for adding tasks, where you can edit, check and delete them.
+- Filter tasks based on priority and status (completion).
  <h4> Technologies used </h4>
 
 HTML, CSS, Bootstrap, Javascript
