@@ -159,6 +159,18 @@ nav .nav-bar .logo a {
 	pointer-events: none;
 }
 
+
+
+
+.form-label{
+	color: #010718;
+}
+
+
+
+
+
+
 .button1 {
 	width: 100px;
 	height: 30px;
@@ -263,12 +275,13 @@ body.dark #formDiv {
 body.dark #label {
 	color: #292c35;
 }
-.red {
+.red .priorityForm {
 	color: hsl(0, 78%, 62%);
+	/* text-decoration: underline; */
 	font-weight: bolder;
 }
 
-.orange {
+.orange .priorityForm {
 	color: hsl(34, 97%, 64%);
 	font-weight: 600;
 }
@@ -292,7 +305,35 @@ body.dark .showAll {
 	/* color: white; */
 	background-color: rgba(191, 187, 187, 0.303);
 }
+/* /// give the user the ability to change the text color */
+[type="color"] {
+	appearance: none;
+	padding: 0;
+	/* padding-top: 5px; */
+	width: 15px;
+	height: 15px;
+	border: none;
+}
 
+[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+.color-picker {
+	padding: 10px 15px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	background: #f8f9f9;
+	width: 250px;
+}
+
+body.dark .color-picker {
+	color: #010718;
+}
 /* Dropdown Start here*/
 .dropdown {
 	position: relative;
@@ -365,13 +406,6 @@ body.dark .showAll {
 	display: block;
 }
 
-.dropdown-header {
-	text-align: center;
-	font-size: large;
-	font-weight: bolder;
-	padding: 1rem;
-}
-
 /* duaa */
 #main-task {
 	position: relative;
@@ -417,7 +451,7 @@ body.dark #add-btn {
 }
 #cards-container #cards {
 	overflow-y: scroll;
-	max-height: 70vh;
+	max-height: 100vh;
 }
 
 #cards-container h1:first-of-type {
@@ -449,8 +483,11 @@ body.dark #add-btn {
 }
 
 #cards-container .box p {
-    color: hsl(229, 6%, 66%);
-    overflow-wrap: break-word;
+	color: hsl(229, 6%, 66%);
+}
+#cards-container .box p,
+#cards-container .box h2 {
+	overflow-wrap: break-word;
 }
 body.dark #cards-container .box p,
 body.dark #cards-container .box h2 {
@@ -463,7 +500,6 @@ body.dark #cards-container .box h2 {
 	padding: 30px;
 	margin: 20px;
 	position: relative;
-	height: fit-content;
 }
 
 body.dark #cards-container .box {
@@ -477,15 +513,21 @@ body.dark #cards-container .box {
 	right: 10px;
 	width: 23px !important;
 }
+#cards-container .edit-btn img {
+	position: absolute;
+	top: 8px;
+	right: 35px;
+	width: 23px !important;
+}
 
 #cards-container .check-btn {
 	transform: scale(1.8);
 	accent-color: rgb(89, 161, 89);
 	border-radius: 50%;
 }
-#cards-container .check-btn:checked {
+/* #cards-container .check-btn:checked {
 	pointer-events: none;
-}
+} */
 
 #cards-container .red {
 	border-top: 3.5px solid hsl(0, 78%, 62%);
@@ -500,6 +542,8 @@ body.dark #cards-container .box {
 #cards-container h2 {
 	color: hsl(234, 12%, 34%);
 	font-weight: 600;
+	height: 38.4px;
+	overflow: hidden;
 }
 
 #cards-container .fill {
@@ -511,41 +555,26 @@ body.dark #cards-container .box {
 	border: 1px solid black;
 	cursor: pointer;
 	position: relative;
-	background-color: rgba(0, 0, 0, 0);
+	background-color: #ff4c4c;
 	margin: 30px;
 	float: right;
-}
-
-#cards-container .fill::after {
-	content: "";
-	background-color: #ff4c4c;
-	width: 100%;
-	z-index: -1;
-	position: absolute;
-	height: 100%;
-	top: 7px;
-	left: 7px;
-	transition: 0.2s;
-}
-
-#cards-container .fill:hover::after {
-	top: 0px;
-	left: 0px;
 }
 
 body.dark #cards-container .fill {
 	color: #ffffff;
 }
-body.dark #cards-container .fill::after {
-	content: "";
-	background-color: #ff4c4ca5;
-	width: 100%;
-	z-index: -1;
-	position: absolute;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	transition: 0.2s;
+
+.scrollDesc {
+	height: 72px;
+	overflow: scroll;
+}
+
+.scrollDesc {
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
+}
+.scrollDesc::-webkit-scrollbar {
+	display: none; /* Safari and Chrome */
 }
 
 /* media emad */

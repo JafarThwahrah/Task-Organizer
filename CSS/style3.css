@@ -4,63 +4,127 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Poppins", "sans-serif";
-
+}
+html {
+	scroll-behavior: smooth;
 }
 
-
-
-.heroSection{
+body {
+	background: linear-gradient(
+		180deg,
+		#345aa4 -28.35%,
+		rgba(63, 0, 156, 0) 158.96%
+	);
+	color: white;
+}
+main {
+	padding-bottom: 10%;
+}
+.nav {
 	display: flex;
-	background:linear-gradient(180deg , #345aa4 -28.35% , rgba(63 , 0 , 156 , 0) 158.96%);
+	justify-content: space-between;
+}
+.HomePageAnchor {
+	margin-left: 10px;
+	padding: 5px;
+}
+
+.HomePageAnchor:hover {
+	text-decoration: none;
+	background-color: white;
+	color: black;
+	border-radius: 15px;
+}
+.navbarList {
+	display: flex;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav ul li {
+	list-style: none;
+	margin: 1rem;
+	color: white;
+}
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	padding: 5px;
+}
+
+nav ul li a:hover {
+	background-color: white;
+	color: black;
+	border-radius: 15px;
+	text-decoration: none;
+}
+
+.logoimg {
+	width: 120px;
+	height: 40px;
+	margin: 1rem;
+}
+
+.HomePageAnchor {
+	color: white;
+	text-decoration: none;
+}
+
+.heroSection {
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* flex-wrap: wrap-reverse; */
+
+	color: white;
+}
+
+.herocontent {
+	display: flex;
 	color: white;
 	justify-content: space-around;
+	flex-wrap: wrap;
 	align-items: center;
 	height: 100vh;
-	animation: shrink 2s;
-	
 }
 
-.imgHero{
+.imgHero {
 	width: 35rem;
 	height: 40rem;
 	padding: 5rem;
 }
 
-.WhatisTaskManagement{
+.WhatisTaskManagement {
 	padding: 5rem;
 	max-width: 55rem;
-
 }
 
-
-
-.Description{
+.Description {
 	font-size: large;
 }
 
-
-.cardSection{
+.cardSection {
 	position: relative;
 	display: flex;
 	justify-content: space-around;
-	align-items:center;
-    height: 60vh;
+	align-items: center;
+	height: 60vh;
 	flex-wrap: wrap;
+	gap: 30px;
 	/* background-color: seashell; */
 }
 
 /* THE MAINCONTAINER HOLDS EVERYTHING */
-.maincontainer{
+.maincontainer {
 	position: relative;
-	width: 250px;
-	height: 320px;
+	width: 280px;
+	height: 350px;
 	background: none;
-	
-  
-  }
-  
-  /* THE CARD HOLDS THE FRONT AND BACK FACES */
-  .thecard{
+}
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.thecard {
 	position: relative;
 	top: 0;
 	left: 0;
@@ -69,19 +133,19 @@
 	border-radius: 10px;
 	transform-style: preserve-3d;
 	transition: all 0.8s ease;
-	box-shadow:10px 8px rgb(227, 220, 220);
-  }
-  
-  /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
-  .thecard:hover{
+	box-shadow: 10px 8px rgb(227, 220, 220);
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.thecard:hover {
 	cursor: pointer;
 	transform: rotateY(180deg);
-  }
-  
-  /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
-   .thefront{
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+.thefront {
 	position: absolute;
-	
+
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -91,10 +155,10 @@
 	overflow: hidden;
 	background: rgb(235, 241, 246);
 	color: rgb(32, 35, 42);
-  }
-  
-  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
-  .theback{
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -107,60 +171,47 @@
 	border-radius: 10px;
 	backface-visibility: hidden;
 	overflow: hidden;
-	background:rgb(206, 175, 223);
+	background: rgb(144, 195, 226);
 	color: white;
 	text-align: center;
 	transform: rotateY(180deg);
-  }
-  
-  
-  /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
-  .thefront h1, .theback h1{
-	font-family: 'zilla slab', sans-serif;
+}
+
+/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+.thefront h1,
+.theback h1 {
+	font-family: "zilla slab", sans-serif;
 	padding: 30px 30px 10px 30px;
 	font-weight: bold;
 	font-size: 24px;
 	text-align: center;
-  }
+}
 
-  .theback h1{
-	font-family: 'zilla slab', sans-serif;
+.theback h1 {
+	font-family: "zilla slab", sans-serif;
 	padding: 30px 30px 10px 30px;
 	font-weight: bold;
 	font-size: 18px;
 	text-align: center;
-  }
-  
+}
 
-
-  
-  .thefront p, .theback p{
-	font-family: 'zilla slab', sans-serif;
+.thefront p,
+.theback p {
+	font-family: "zilla slab", sans-serif;
 	padding: 10px 30px 30px 30px;
 	font-weight: normal;
-	font-size: 12px;
+	font-size: 14px;
 	text-align: center;
-  }
+}
 
-
-
-
-  .heading-secondary {
+.heading-secondary {
 	font-size: 2.5em;
 	font-weight: 600;
-	/* display: inline-block; */
 	text-align: center;
-	background-image: linear-gradient(to right, #7ed56f, #28b485);
-	 background-clip: text;
+	background-clip: text;
 	-webkit-background-clip: text;
-	color: gold;
-  }
- 
-
-
-
-
-
+	color: white;
+}
 
 @keyframes shrink {
 	from {
@@ -171,7 +222,6 @@
 	}
 }
 
-
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -180,5 +230,16 @@
 	to {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+@media (max-width: 790px) {
+	.heroSection {
+		overflow: scroll;
+	}
+	.herocontent {
+		text-align: center;
+	}
+	#CARDS {
+		overflow: scroll;
 	}
 }
